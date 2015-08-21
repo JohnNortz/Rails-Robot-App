@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Robot Index</title>
+</head>
+<body>
+	<h1>Listing articles</h1>
+ 
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Info</th>
+		</tr>
+
+		<% @robots.each do |robot| %>
+		<tr>
+			<td><%= robot.name %></td>
+			<td><%= robot.info %></td>
+			<td><%= link_to 'Show', robot_path(robot)%> </td>
+			<td><%= link_to 'Edit', edit_robot_path(robot)%> </td>
+			<td><%= link_to 'Remove', robot_path(robot), method: :delete, data: {confirm: 'Are you sure?'} %> </td>
+		</tr>
+	<% end %>
+</table>
+
+
+<%= link_to 'New Robot', new_robot_path %>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Robot</title>
+</head>
+<body>
+	<p>
+		<strong>Name:</strong>
+		<%= @robot.name %>
+	</p>
+
+	<p>
+		<strong>Info:</strong>
+		<%= @robot.info %>
+	</p>
+
+	<td><%= link_to 'Edit', edit_robot_path(@robot)%> </td>
+
+	<%= link_to 'List Robots', robots_path %>
+</body>
+</html>

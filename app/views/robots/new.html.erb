@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>New Robot</title>
+</head>
+<body>
+	<h1>New Robot</h1>
+	<%= form_for :robot, url: robots_path do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :info %><br>
+		<%= f.text_area :info %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+	<% end %>
+
+	<%= link_to 'List Robots', robots_path %>
+</body>
+</html>
